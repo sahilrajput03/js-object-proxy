@@ -1,10 +1,12 @@
 // handler is empty.
 const object = {
-  message1: 'hello',
-  message2: 'everyone',
+	message1: 'hello',
+	message2: 'everyone',
 }
 
 const handler1 = {}
+// handlers are always objects though🧄︎.
+// * Popular traps(properties) of handler object are get, set and apply.
 
 const proxy1 = new Proxy(object, handler1)
 
