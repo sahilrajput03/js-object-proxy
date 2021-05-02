@@ -1,17 +1,18 @@
 const object = {
-  message1: 'hello',
-  message2: 'everyone',
+	message1: 'hello',
+	message2: 'everyone',
 }
 
 const handler3 = {
-  get: function (object, keyName) {
-    // console.log(object) // { message1: 'hello', message2: 'everyone' }
-    // console.log(keyName) // message1, message2
-    if (keyName === 'message2') {
-      return 'world'
-    }
-    return Reflect.get(...arguments)
-  },
+	get: function (object, keyName) {
+		// console.log(object) // { message1: 'hello', message2: 'everyone' }
+		// console.log(keyName) // message1, message2
+		if (keyName === 'message2') {
+			return 'world'
+		}
+		// return Reflect.get(...arguments)// This was from mdn, but it is insancely used here IMO ~sahil.
+		return object[keyName]
+	},
 }
 
 const proxy3 = new Proxy(object, handler3)
