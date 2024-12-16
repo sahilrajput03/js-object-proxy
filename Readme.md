@@ -17,41 +17,13 @@ For all above files should render in a single file for easier reference and put 
 
 # Code of all files (using Markdown autodocs ❤️)
 
-## file - `using-markdown-autodocs.md`
-
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./using-markdown-autodocs.md) -->
-<!-- The below code snippet is automatically added from ./using-markdown-autodocs.md -->
-```md
-**#TODO: Move contents of this to my homepage at sahilrajput.com (under `Learn Markdown` page with a heart).**
-
-# Using Markdown autodocs
-
-Source: https://github.com/marketplace/actions/markdown-autodocs
-
-Add below text to your readme file for importing `./relative/path/to/file.js` file's code.
-
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./relative/path/to/file.js) -->
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
-## Local Usage
-
-```bash
-npm i -g markdown-autodocs
-markdown-autodocs -c code-block -o ./README.md
-```
-
-## Adding markdown autodocs to a project
-
-Simply add `workflow1.yml` file `.github/workflows/workflow1.yml` to the repository.
-```
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
 ## File: `0-1.js`
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./0-1.js) -->
 <!-- The below code snippet is automatically added from ./0-1.js -->
 ```js
 // Usage in my-rpc frontend: [Click here](https://github.com/sahilrajput03/learn-rpc-middlewares/blob/main/my-rpc/index.html)
+// hello world!!!
 
 const target = {};
 const handler = {
