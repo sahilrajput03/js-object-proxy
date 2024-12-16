@@ -1,18 +1,17 @@
-const user = {
-	firstName: 'John',
-	lastName: 'Doe',
-}
-
 const getFullName = function (user) {
-	return `${user.firstName} ${user.lastName}`
-}
+	return `${user.firstName} ${user.lastName}`;
+};
 
 const getFullNameProxy = new Proxy(getFullName, {
 	apply(fn, thisArg, args) {
-		// args[0] // Output: { firstName: 'John', lastName: 'Doe' }
-		// args[1] // Output: 'Chikchik'
-		return fn(...args).toUpperCase()
+		// console.log('args[0]?', args[0]); // { firstName: 'John', lastName: 'Doe' }
+		// console.log('args[1]?', args[1]); // 'Chikchik'
+		return fn(...args).toUpperCase();
 	},
-})
+});
 
-console.log(getFullNameProxy(user, 'Chikchik')) // JOHN DOE.
+const myUser = {
+	firstName: 'John',
+	lastName: 'Doe',
+};
+console.log(getFullNameProxy(myUser, 'Chikchik')); // JOHN DOE.

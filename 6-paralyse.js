@@ -1,14 +1,13 @@
-let obj = {
+let handler = {
+  get: (obj, keyName) => { },
+  set: (obj, keyName, inputValue) => { },
+};
+
+let myTarget = {
   a: 10,
   b: 20,
-}
+};
+const myProxy = new Proxy(myTarget, handler);
 
-let handler = {
-  get: (obj, keyName) => {},
-  set: (obj, keyName, inputValue) => {},
-}
-
-const proxy6 = new Proxy(obj, handler)
-
-proxy6.c = 30
-console.log(proxy6.c) // undefined
+myProxy.c = 30;
+console.log(myProxy.c); // undefined

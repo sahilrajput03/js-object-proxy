@@ -1,12 +1,12 @@
-const object = {}
-const handler = {}
+const handler = {};
 
-const proxy5 = new Proxy(object, handler)
+const myTarget = {};
+const myProxy = new Proxy(myTarget, handler);
 
-proxy5.a = 37
+myProxy.a = 37;
 //  operation forwarded to the target
 
-console.log(proxy5.a)
+console.log(myProxy.a);
 //  37
 //  (The operation has been properly forwarded!)
 
