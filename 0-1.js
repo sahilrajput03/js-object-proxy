@@ -4,7 +4,7 @@
 const target = {};
 const handler = {
     get(target, property, receiver) {
-        return () => console.log('property?:', prop);
+        return () => console.log('property?:', property);
     },
 };
 
