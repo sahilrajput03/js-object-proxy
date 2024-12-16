@@ -1,18 +1,20 @@
-# src: https://github.com/jaames/iro.js/blob/master/.github/workflows/markdown-autodocs.yml
-#     - Sahil: I updated the version of markdown-autodocs from `1.0.2` (used in above file) to `1.0.7` (latest).
-
+# src: https://github.com/dineshsonachalam/repo-using-markdown-autodocs/blob/main/.github/workflows/markdown-autodocs.yml
 name: markdown-autodocs
 
 on:
-  push:
-    branches:    
-      - '**'        # matches every branch
+  workflow_run:
+    workflows:
+      - generate-artifacts
+    types:
+      - completed
 
 jobs:        
   auto-update-readme:
       runs-on: ubuntu-latest
       steps:
-        - name: Checkout
-          uses: actions/checkout@v3
+        - uses: actions/checkout@v2
         - name: Markdown autodocs
           uses: dineshsonachalam/markdown-autodocs@v1.0.4
+          with:
+            output_file_paths: '[./README.md]'
+            # output_file_paths: '[./README.md,./docs/example.md]'
