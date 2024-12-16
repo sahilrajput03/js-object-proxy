@@ -1,4 +1,5 @@
 # src: https://github.com/dineshsonachalam/repo-using-markdown-autodocs/blob/main/.github/workflows/markdown-autodocs.yml
+# Sahil: I updated so it runs on push via `on: [push]`
 name: markdown-autodocs
 
 on: [push]
@@ -9,7 +10,7 @@ jobs:
       steps:
         - uses: actions/checkout@v2
         - name: Markdown autodocs
-          uses: dineshsonachalam/markdown-autodocs@v1.0.4
+          uses: dineshsonachalam/markdown-autodocs@v1.0.7
           with:
             output_file_paths: '[./README.md]'
             # output_file_paths: '[./README.md,./docs/example.md]'
