@@ -1,12 +1,7 @@
 # src: https://github.com/dineshsonachalam/repo-using-markdown-autodocs/blob/main/.github/workflows/markdown-autodocs.yml
 name: markdown-autodocs
 
-on:
-  workflow_run:
-    workflows:
-      - generate-artifacts
-    types:
-      - completed
+on: [push]
 
 jobs:        
   auto-update-readme:
