@@ -1,5 +1,3 @@
-# src: https://github.com/dineshsonachalam/repo-using-markdown-autodocs/blob/main/.github/workflows/markdown-autodocs.yml
-# Sahil: I updated so it runs on push via `on: [push]`
 name: markdown-autodocs
 
 on: [push]
