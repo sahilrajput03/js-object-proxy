@@ -1,5 +1,5 @@
 // Usage in my-rpc frontend: [Click here](https://github.com/sahilrajput03/learn-rpc-middlewares/blob/main/my-rpc/index.html)
-// Wow superb1
+// Wow superb12
 
 const target = {};
 const handler = {
