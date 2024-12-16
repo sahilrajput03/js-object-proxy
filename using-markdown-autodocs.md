@@ -20,6 +20,6 @@ npm i -g markdown-autodocs
 markdown-autodocs -c code-block -o ./README.md
 ```
 
-## Adding markdown autodocs to a project
+## Adding markdown autodocs as github workflow
 
-Simply add `workflow1.yml` file `.github/workflows/workflow1.yml` to the repository.
+Refer the workflow file of - https://github.com/sahilrajput03/js-object-proxy

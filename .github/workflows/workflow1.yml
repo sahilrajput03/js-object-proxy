@@ -1,3 +1,0 @@
-# source: https://github.com/marketplace/actions/markdown-autodocs
-- name: Markdown autodocs
-  uses: dineshsonachalam/markdown-autodocs@v1.0.7
