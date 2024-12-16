@@ -23,7 +23,7 @@ For all above files should render in a single file for easier reference and put 
 <!-- The below code snippet is automatically added from ./0-1.js -->
 ```js
 // Usage in my-rpc frontend: [Click here](https://github.com/sahilrajput03/learn-rpc-middlewares/blob/main/my-rpc/index.html)
-// hello world!!!
+// Wow111
 
 const target = {};
 const handler = {
