@@ -4,11 +4,9 @@ Note: I have disabled this file's formatting with prettier in `.prettierignore` 
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./myfile.js) -->
 <!-- The below code snippet is automatically added from ./myfile.js -->
-
 ```js
-console.log('file.js? - 5:07pm')
+console.log('file.js? - 5:15pm');
 ```
-
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 Please refer the original readme file at Readme-original.md file in this repo.
