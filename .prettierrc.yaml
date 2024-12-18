@@ -1,6 +1,6 @@
 trailingComma: 'es5'
 tabWidth: 2
-semi: false
+semi: true
 # ^^ This is for semicolon.
 singleQuote: true
 # ^^ This rule doesn't specify for jsx.
