@@ -1,0 +1,6 @@
+{
+	"events": {
+		"start": "clear && printf '\\e[3J'",
+		"for-macos": "clear && printf '\\e[3J'"
+    }
+}

@@ -1,8 +1,9 @@
 name: markdown-autodocs
 
-on: [push]
+on: [] # disabling this workflow temporarily
+# on: [push]
 
-jobs:        
+jobs:
   auto-update-readme:
       runs-on: ubuntu-latest
       steps:
@@ -12,9 +13,12 @@ jobs:
             node-version: 20
         
         - uses: actions/checkout@v4
+
+        - name: List files
+          run: ls -la
         
         - name: Markdown autodocs
-          uses: dineshsonachalam/markdown-autodocs@v1.0.7
+          uses: dineshsonachalam/markdown-autodocs@v1.0.6
           with:
             # Optional, defaults to author of the commit that triggered the run
             commit_author: Author <actions@github.com>
@@ -31,7 +35,7 @@ jobs:
             branch: master
         
             # Optional output file paths, defaults to '[./README.md]'.
-            output_file_paths: '[./README.md]'
+            output_file_paths: '[README.md]'
         
             # Categories to automatically sync or transform its contents in the markdown files.
             # Defaults to '[code-block,json-to-html-table,workflow-artifact-table]'
