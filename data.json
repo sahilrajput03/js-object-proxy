@@ -1,6 +1,6 @@
 [
     {
-        "Ticker1": "AMZN",
+        "Ticker2": "AMZN",
         "Future price after": "1 day",
         "Predicted price for 2024-12-18": "236.95$",
         "Mean absolute error": 0.8116941003273634,
