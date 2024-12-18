@@ -1,43 +1,28 @@
 const handler = {
   get: (obj, keyName) => {
-    const isPushOrLength = keyName === 'push' || keyName === 'length';
-    if (!isPushOrLength) {
-      console.log('::get', { keyName });
-      // ^^ 🤾︎ Doing this so I don't get log for methods like push or length which is annoying.
-    }
-
-    return obj[keyName]; // Note: Also, I am returning our array's push method when accessed on `line 8` and `line 9`.
+    console.log('::get', { keyName });
+    return obj[keyName]; // Array's `push` method is returned when `myProxy.push()` is executed
   },
   set: (obj, keyName, inputValue) => {
-    const isLength = keyName === 'length';
-    if (!isLength) {
-      console.log('::set', { keyName, inputValue });
-      // ^^ 🤾︎ Doing this so I don't get log for methods like length which is annoying.
-    }
-
-    obj[keyName] = inputValue; // Note: Also, I am setting our array's length when called the original push method on the array on `line 11`(i.e., method returned from the get method of the proxy handler, yikes!).
+    console.log('::set', { keyName, inputValue });
+    obj[keyName] = inputValue; // Array's length is set push method on the array on `line 11`(i.e., method returned from the get method of the proxy handler, yikes!).
     return true;
-    // NOTE: The length of the object is automatically updated with required value calculated from the array though.
   },
 };
 
-const myTarget = [1, 2];
+const myTarget = [];
 const myProxy = new Proxy(myTarget, handler);
 
-// proxy7.c = 30
-// console.log(proxy7.c) // 30
+myProxy.push(1);
+// Output:
+// ::get { keyName: 'push' }                  // push method is retrieved
+// ::get { keyName: 'length' }                // length is retrieved
+// ::set { keyName: '0', inputValue: 1 }      // On property '0' set value `1`
+// ::set { keyName: 'length', inputValue: 1 } // On property 'length' set value `1`
 
-// console.log(proxy7[0])// Works very well 🏑︎ with get behaviour.
 
-// proxy7[4] = 'boom chick' // Works very well 🏑︎ too.
+console.log('---');
 
-myProxy.push(4);
-myProxy.push(5);
-// Note: proxy8.length get and set methods are automatically called(as we unnoticingly return those methods from each of get/set methods of handlers, yikes🧸︎!) when we use push method on proxy object, and we get logs for each of these calls in our get and set methods and thus I am removing those logs.
-
-console.log('------');
-// console.log(proxy8)
-
-console.log(myProxy[3]);
-// proxy8[3] = 6 // Uncommet to see expected behaviour🧸︎.
-console.log(myProxy[3]);
+myProxy[0] = 2;
+// Output:
+// ::set { keyName: '0', inputValue: 2 }

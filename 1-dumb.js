@@ -1,7 +1,5 @@
 // no handler example
 const handler = {};
-// handlers are always objects though🧄︎.
-// * Popular traps(properties) of handler object are get, set and apply.
 
 const myTarget = {
 	message1: 'hello',

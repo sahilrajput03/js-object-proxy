@@ -1,3 +1,8 @@
+// * Popular traps(properties) of handler object are:
+// - get
+// - set and
+// - apply
+
 const handler = {
 	get: function (target) {
 		// here we get reference to object itself.

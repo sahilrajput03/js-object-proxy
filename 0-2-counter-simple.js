@@ -3,7 +3,7 @@ const handler = {
         return (...args) => {
             target.count += args[0];
             console.log('property?:', property); // increment
-            return 234;
+            return target.count;
         };
     },
 };
@@ -12,8 +12,6 @@ const myTarget = { count: 1 };
 const rpc = new Proxy(myTarget, handler);
 
 const count = rpc.increment(2);
-console.log("count:", count);
+console.log("count:", count); // 3
 
-console.log("rpc:", rpc);
-
-// console.log(myTarget.count === myProxy.count); // true
+console.log("rpc:", rpc); // { count: 3 }

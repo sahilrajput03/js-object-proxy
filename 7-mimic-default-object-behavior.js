@@ -1,4 +1,3 @@
-// example 1 for `set` method.
 // In below example we are mimicing default js object behaviour with below proxy example.
 let handler = {
   get: (obj, keyName) => {
