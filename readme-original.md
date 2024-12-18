@@ -1,6 +1,3 @@
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./myfile.js) -->
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
 ## Todo
 
 - **TODO:** ❤️ Do the todo mentioned inside file `./using-markdown-autodocs.md`
