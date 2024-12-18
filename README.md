@@ -3,7 +3,7 @@
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./myfile.js) -->
 <!-- The below code snippet is automatically added from ./myfile.js -->
 ```js
-console.log('file1.js?');
+console.log('file.js? - 5:07pm');
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
