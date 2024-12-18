@@ -25,7 +25,6 @@ Google Docs - [Learn markdown-autodocs](https://docs.google.com/document/d/1kg53
 <!-- The below code snippet is automatically added from ./0-1.js -->
 ```js
 // Usage in my-rpc frontend: [Click here](https://github.com/sahilrajput03/learn-rpc-middlewares/blob/main/my-rpc/index.html)
-// Wow superb123
 
 const target = {};
 const handler = {
