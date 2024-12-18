@@ -2,6 +2,8 @@ name: Generate Report
 
 on:
   push:
+    branches:    
+      - '**'  # matches every branch
   workflow_dispatch: # It is an event that allows you to manually trigger a workflow from github actions page
 
 jobs:
