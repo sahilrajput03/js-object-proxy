@@ -5,12 +5,6 @@
   - **Todo:** Do continue learning from examples from above link, and master every example's logic though.
 - **Todo:** Another decent article(already covered in this repo though): https://www.javascripttutorial.net/es6/javascript-proxy/
 
-## Todo
-
-- **TODO:** ❤️ Do the todo mentioned inside file `./using-markdown-autodocs.md`
-- Newer files (16 Dec, 2024): `new-0.js`, `new-1.js`, `new-2.js`
-- all other .js files in this repository
-
 ### Notes on **not** using prettier for this readme
 
 Google Docs - [Learn markdown-autodocs](https://docs.google.com/document/d/1kg532M0dHBGgLTuRvc5RznHdRJX_P259rlyof6784Vg/edit?tab=t.0#heading=h.hvtjqdu7k8j2)
