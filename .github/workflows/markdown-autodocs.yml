@@ -3,7 +3,7 @@ name: Generate Report
 on:
   push:
     branches:    
-      - '**'  # matches every branch
+      - '**'  # Matches all branches, including nested ones like 'feature/xyz'
   workflow_dispatch: # It is an event that allows you to manually trigger a workflow from github actions page
 
 jobs:
